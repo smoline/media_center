@@ -8,3 +8,14 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ @use "navbar";
+ @use "colors";
+
+ /* Set the background color of the page to black */
+ body {
+   background-color: black;
+   color: white;
+   font-family: "Segoe UI", "Roboto", "Ubuntu", "Arial", sans-serif;
+   /* Optional: Set text color to white for better contrast */
+ }

@@ -2,13 +2,19 @@
   "name": "app",
   "private": true,
   "devDependencies": {
-    "esbuild": "^0.25.9"
+    "esbuild": "^0.25.9",
+    "sass-embedded": "^1.92.0"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
+    "build:css": "sass ./app/assets/stylesheets/application.scss ./app/assets/builds/application.css",
+    "build:all": "yarn build && yarn build:css",
+    "watch": "yarn build --watch",
+    "watch:css": "yarn build:css --watch"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
-    "@hotwired/turbo-rails": "^8.0.16"
+    "@hotwired/turbo-rails": "^8.0.16",
+    "lit": "^3.3.1"
   }
 }

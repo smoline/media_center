@@ -1,0 +1,47 @@
+<nav class="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">Media Library</a>
+    <ul class="navbar-nav">
+        <li class="nav-item <%= 'active' if controller_name == 'home' %>"><%= link_to 'Home', root_path, class: 'nav-link' %></li>
+        <li class="nav-item dropdown <%= 'active' if controller_name == 'movies' %>">
+        <a href="#" class="nav-link dropdown-toggle" onclick="toggleDropdown(event)">Movies <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><%= link_to "Sort by Title", movies_path(sort: 'title') %></li>
+            <li><%= link_to "Sort by Release Date", movies_path(sort: 'release_date') %></li>
+            <li><%= link_to "Sort by When Added", movies_path(sort: 'created_at') %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to "Favorites Only", movies_path(sort: 'favorites') %></li>
+        </ul>
+        </li>
+    </ul>
+    <% if controller_name == "movies" && action_name == "index" %>
+        <ul>
+        <%= form_with url: search_movies_path, method: :get, local: true, class: 'navbar-search' do %>
+            <%= text_field_tag :query, params[:query], class: "search-input", placeholder: "Search by Title, Description or Year", style: 'width: 275px' %>
+            <%= submit_tag 'Search', class: 'search-button' %>
+        <% end %>
+        </ul>
+    <% end %>
+  </div>
+</nav>
+
+    <script>
+      function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdown = event.target.nextElementSibling;
+        dropdown.classList.toggle('show');
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropdown-toggle')) {
+          const dropdowns = document.getElementsByClassName("dropdown-menu");
+          for (let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    </script>

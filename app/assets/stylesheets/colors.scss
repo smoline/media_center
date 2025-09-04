@@ -1,0 +1,117 @@
+// Neutral Base
+$black: #000000;
+$dark-gray:    #2E2E2E;
+$medium-gray:  #7D7D7D;
+$light-gray:   #D3D3D3;
+$white:        #FFFFFF;
+
+// Accent Colors
+$teal:         #4DB6AC;
+$slate-blue:   #4A6FA5;
+$coral:        #F28C8C;
+$amber:        #FFC300;
+$lime-green:   #A3E635;
+$electric-blue: #3B82F6;
+$blue: #1D4ED8;
+
+// Gray Base Colors
+$gray-100:  #F8F9FA; // very light, almost white
+$gray-200:  #E9ECEF; // light background, cards
+$gray-300:  #DEE2E6; // borders, subtle dividers
+$gray-400:  #CED4DA; // secondary text, subtle elements
+$gray-500:  #ADB5BD; // medium text, muted elements
+$gray-600:  #6C757D; // darker muted text
+$gray-700:  #495057; // headings, darker secondary text
+$gray-800:  #343A40; // dark background panels
+$gray-900:  #212529; // near black, dark UI elements
+$black-100: #000000; // very black
+
+// Blue Base Colors
+$blue-muted:       #93C5FD; // very light, subtle gradient
+$blue-light:       #3B82F6; // lighter version
+$blue-base:        #1D4ED8; // original
+$blue-dark:        #1E40AF; // darker version
+
+// Red Base Colors
+$red-muted:       #FBC5C5; // very light, subtle gradient
+$red-light:       #F87171; // lighter version
+$red-base:        #E63946; // original
+$red-dark:        #9B1B30; // darker version
+
+// Green Base Colors
+$green-muted:     #A8D5A8; // very light, subtle green
+$green-light:     #66C266; // lighter, fresh green
+$green-base:      #228B22; // forest green
+$green-dark:      #145214; // darker, deep forest
+
+// Orange Base Colors
+$orange-muted:     #FFD9A6; // very light, subtle orange
+$orange-light:     #FFB84D; // lighter, soft orange
+$orange-base:      #FF9500; // vibrant orange
+$orange-dark:      #CC7300; // darker, deep orange
+
+// CSS Custom Properties
+:root {
+  --black: #000000;
+  --dark-gray: #2E2E2E;
+  --medium-gray: #7D7D7D;
+  --light-gray: #D3D3D3;
+  --white: #FFFFFF;
+
+  /* Accent Colors */
+  --teal: #4DB6AC;
+  --slate-blue: #4A6FA5;
+  --coral: #F28C8C;
+  --amber: #FFC300;
+  --lime-green: #A3E635;
+  --electric-blue: #3B82F6;
+  --blue: #1D4ED8;
+
+  --bluegray-50:   #F0F4F8;
+  --bluegray-100:  #D9E2EC;
+  --bluegray-200:  #BCCCDC;
+  --bluegray-300:  #9FB3C8;
+  --bluegray-400:  #829AB1;
+  --bluegray-500:  #627D98;
+  --bluegray-600:  #486581;
+  --bluegray-700:  #334E68;
+  --bluegray-800:  #243B53;
+  --bluegray-900:  #102A43;
+
+
+  /* Gray Base Colors */
+  --gray-100: #F8F9FA;
+  --gray-200: #E9ECEF;
+  --gray-300: #DEE2E6;
+  --gray-400: #CED4DA;
+  --gray-500: #ADB5BD;
+  --gray-600: #6C757D;
+  --gray-700: #495057;
+  --gray-800: #343A40;
+  --gray-900: #212529;
+  --black-100: #000000;
+
+  /* Blue Base Colors */
+  --blue-muted: #93C5FD;
+  --blue-light: #3B82F6;
+  --blue-base: #1D4ED8;
+  --blue-dark: #1E40AF;
+
+  /* Red Base Colors */
+  --red-muted: #FBC5C5;
+  --red-light: #F87171;
+  --red-base: #E63946;
+  --red-dark: #9B1B30;
+
+  /* Green Base Colors */
+  --green-muted: #A8D5A8;
+  --green-light: #66C266;
+  --green-base: #228B22;
+  --green-dark: #145214;
+
+  /* Orange Base Colors */
+  --orange-muted: #FFD9A6;
+  --orange-light: #FFB84D;
+  --orange-base: #FF9500;
+  --orange-dark: #CC7300;
+}
