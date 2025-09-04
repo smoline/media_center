@@ -1,8 +1,7 @@
-// app/javascript/components/fx-input.js
 import { LitElement, html, css } from "lit";
 
 export class FxInput extends LitElement {
-  static formAssociated = true; // enables native form submission
+  static formAssociated = true;
 
   static styles = css`
     :host { display: block; font-family: "Segoe UI", "Roboto", "Ubuntu", "Arial", sans-serif; margin-bottom: 1rem; }
@@ -32,7 +31,7 @@ export class FxInput extends LitElement {
     this.hint = "";
     this.error = "";
     this.required = false;
-    this._internals = this.attachInternals(); // form integration
+    this._internals = this.attachInternals();
   }
 
   connectedCallback() {
@@ -46,7 +45,6 @@ export class FxInput extends LitElement {
   _onInput(e) {
     this.value = e.target.value;
 
-    // Set form value
     this._internals.setFormValue(this.value);
 
     // Validate required

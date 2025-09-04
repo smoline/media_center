@@ -21,20 +21,12 @@ class MoviesController < ApplicationController
 
   # POST /movies
   def create
-    tmdb_service = TmdbService.new
-    tmdb_data = tmdb_service.fetch_movie(params[:tmdb_id])
-
-    @movie = Movie.new(
-      title: tmdb_data["title"],
-      description: tmdb_data["overview"],
-      release_date: tmdb_data["release_date"],
-      runtime: tmdb_data["runtime"]
-    )
+    @movie = Movie.new(movie_params)
 
     if @movie.save
       redirect_to @movie, notice: "Movie was successfully created."
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -67,6 +59,6 @@ class MoviesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def movie_params
-      params.require(:movie).permit(:title, :description, :rating, :release_date)
+      params.require(:movie).permit(:title, :description, :runtime)
     end
 end

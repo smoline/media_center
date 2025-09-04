@@ -12,7 +12,13 @@
   <% end %>
 
   <div class="field">
-    <fx-input label="Title" required name="movie['title']" placeholder="Movie Title"></fx-input>
+    <fx-input
+      data-error="<%= movie.errors[:title].first %>"
+      label="Title"
+      required
+      name="movie['title']"
+      placeholder="Movie Title"
+      value="<%= movie.title %>"></fx-input>
   </div>
 
   <div class="field">
@@ -21,18 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :release_date %>
-    <%= form.date_select :release_date %>
-  </div>
-
-  <div class="field">
     <%= form.label :runtime %>
     <%= form.number_field :runtime %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tmdb_id %>
-    <%= form.text_field :tmdb_id %>
   </div>
 
   <div class="actions">
